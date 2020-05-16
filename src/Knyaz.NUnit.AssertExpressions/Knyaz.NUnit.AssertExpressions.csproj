@@ -22,4 +22,11 @@
     <PackageReference Include="NUnit" Version="[3.0.0,4.0.0)" />
   </ItemGroup>
 
+    <Target Name="GetVersion" Label="Saves generated assembly version to the version.text file">
+        <WriteLinesToFile File="version.txt" Lines="$(Version)" Overwrite="true" Encoding="ASCII" />
+    </Target>
+    <ItemGroup>
+        <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+    </ItemGroup>
+
 </Project>
