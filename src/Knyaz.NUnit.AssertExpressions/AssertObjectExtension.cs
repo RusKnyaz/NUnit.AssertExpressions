@@ -35,6 +35,17 @@ namespace Knyaz.NUnit.AssertExpressions
 					global::NUnit.Framework.Assert.IsFalse((bool)result, GetMessage(unary.Operand));
 					break;
 				}
+				case TypeBinaryExpression typeBinaryExpression:
+				{
+					var result = Invoke(obj, parent, expression);
+					if (result is bool b && b)
+						break;
+
+					var expectedType = typeBinaryExpression.TypeOperand;
+					var left = Invoke(obj, parent, typeBinaryExpression.Expression);
+					global::NUnit.Framework.Assert.IsInstanceOf(expectedType, left);
+					break;
+				}
 				default:
 				{
 					var result = Invoke(obj, parent, expression);
