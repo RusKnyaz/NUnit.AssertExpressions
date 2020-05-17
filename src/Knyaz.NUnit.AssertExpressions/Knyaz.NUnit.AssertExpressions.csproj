@@ -8,7 +8,7 @@
         <PackageProjectUrl>https://github.com/RusKnyaz/NUnit.AssertExpressions</PackageProjectUrl>
         <RepositoryUrl>https://github.com/RusKnyaz/NUnit.AssertExpressions</RepositoryUrl>
         <RepositoryType>Git</RepositoryType>
-        <Description>NUNit extension for the objects verification.</Description>
+        <Description>NUnit extension for the objects verification.</Description>
         <PackageTags>nunit test testing assert</PackageTags>
         <Copyright>Konstantin Petukhov, 2020</Copyright>
         <VersionPrefix>1.0.0</VersionPrefix>
